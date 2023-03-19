@@ -1,4 +1,4 @@
-# Employee-DBMS
+# Employee DBMS
 This is a simple terminal based Database Management System that is implemented using the C-Language.
 It is fast, reliable, light and filled with functionality.
 It is capable of functions like Selection, Sort, Addition, Updation, Deletion and Display. 
