@@ -19,7 +19,7 @@ FILE * fp;
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 int total_count(){
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-        fp = fopen("./files/mainDB.txt","r");
+        fp = fopen("./mainDB.txt","r");
         if (fp == NULL){
                 printf("Error! Can't open file.");
         }
@@ -39,7 +39,7 @@ int total_count(){
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 emp* get_data(){
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-        FILE * fp = fopen("./files/mainDB.txt","r");
+        FILE * fp = fopen("./mainDB.txt","r");
         if (fp == NULL){
                 printf("Error! Can't open file.");
         }
@@ -72,7 +72,7 @@ emp* get_data(){
 void writefile(emp* arr){
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
         int n = total_count();
-        FILE * fp = fopen("./files/temp.txt","w");
+        FILE * fp = fopen("./temp.txt","w");
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
         if (fp == NULL){
                 printf("Error! Can't open file.");
@@ -82,7 +82,7 @@ void writefile(emp* arr){
                 fprintf(fp,"%d %d %d %c %s %s %s\n",arr[i].id,arr[i].salary,arr[i].age,arr[i].gen,arr[i].name,arr[i].dept,arr[i].desg);
         }
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-        remove("./files/mainDB.txt");
+        remove("./mainDB.txt");
         fclose(fp);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
 }
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
@@ -101,7 +101,7 @@ int delete(emp* arr){
                 return 0;
         }
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-        FILE * fp = fopen("./files/temp.txt","w");
+        FILE * fp = fopen("./temp.txt","w");
         if (fp == NULL){
                 printf("Error! Can't open file.");
         }
@@ -120,8 +120,8 @@ int delete(emp* arr){
                 printf("\nEmployee not found!\n");
         }
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-        remove("./files/mainDB.txt");
-        rename("./files/temp.txt","./files/mainDB.txt");
+        remove("./mainDB.txt");
+        rename("./temp.txt","./mainDB.txt");
 }
 
 void display(emp* arr){
@@ -235,7 +235,7 @@ int update(emp* arr){
         }
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
         writefile(arr);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-        rename("./files/temp.txt","./files/mainDB.txt");
+        rename("./temp.txt","./mainDB.txt");
 }
 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
@@ -264,7 +264,7 @@ void newemp(emp* arr){
         printf("Enter employee Salary: ");
         scanf("%d",&e.salary);
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-        FILE * fp = fopen("./files/mainDB.txt","a");
+        FILE * fp = fopen("./mainDB.txt","a");
         if (fp == NULL){
                 printf("Error! Can't open file.");
         }
@@ -395,7 +395,7 @@ void sortt(emp* arr){
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
         if (op == 1){
                 writefile(arr);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
-                rename("./files/temp.txt","./files/mainDB.txt");
+                rename("./temp.txt","./mainDB.txt");
         }
 }
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
