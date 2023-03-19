@@ -1,0 +1,14 @@
+100 14000 27 M keshav MRN Professor
+101 15000 19 M aadhi CSE HOD
+102 11000 21 F nitin CSE Asst.Professor
+103 13000 62 F abilash MECH Professor
+104 11000 19 F rishab MECH T.Asst
+105 1000 17 F lakshay IT Dean
+106 14000 19 M jesse CSE Asst.Professor
+107 12000 17 M vamsi CSE Scholar
+108 15000 55 M srini EEE Professor
+109 17000 32 F skyler EEE HOD
+110 14000 42 F hank ECE Professor
+111 13000 17 M shriram CSE Professor
+112 13000 19 M aswath IT Professor
+113 16000 54 M walter CHEM Dean
